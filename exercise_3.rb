@@ -5,8 +5,20 @@
 #      qat   -> atqay
 
 def pig_latin(word)
-
+  w0 = word[0]
+  w1 = word[1]
+  if w0 == "q" && w1 == "u"
+    a = "#{word}".slice!(2..-1) + w0 + w1
+    "#{a}ay"
+  elsif w0 == "q"
+    a = "#{word}".slice!(1..-1) + w0
+    "#{a}ay"
+  else
+    "#{word}way"
+  end
 end
+
+pig_latin("quick")
 
 ## Tests:
 
