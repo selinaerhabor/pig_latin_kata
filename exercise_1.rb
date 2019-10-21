@@ -11,8 +11,17 @@
 # Assume your user is a developer — e.g. you don't need to write a user interface.
 
 def pig_latin(word)
+  first_letter = word[0].downcase
+  if ["a", "e", "i", "o", "u"].include?(first_letter)
+    "#{word}way"
+  else
+    a = "#{word}".slice!(1..-1) + first_letter
+    "#{a}ay"
 
+  end
 end
+
+pig_latin("donkey")
 
 ## Tests:
 
